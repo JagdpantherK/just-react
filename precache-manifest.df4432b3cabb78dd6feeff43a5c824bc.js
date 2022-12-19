@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a665e4a21125d89f57a2",
-    "url": "/just-react/static/css/main.596e209e.chunk.css"
+    "revision": "cc36e8161a39e1f44a0f",
+    "url": "/just-react/static/css/main.a15093ea.chunk.css"
   },
   {
-    "revision": "a665e4a21125d89f57a2",
+    "revision": "cc36e8161a39e1f44a0f",
     "url": "/just-react/static/js/main.5d2b3220.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/just-react/static/js/3.a2d6af6c.chunk.js"
   },
   {
-    "revision": "7819d9ee1f206ddaaf851d84c9665d87",
+    "revision": "1273cb5b74781f4b47aa336450d498eb",
     "url": "/just-react/index.html"
   }
 ];
