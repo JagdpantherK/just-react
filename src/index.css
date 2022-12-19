@@ -5,16 +5,6 @@ body {
   margin: 20px;
 }
 
-.wrapper{
-  margin: 0 auto;
-  width: 90%;
-  height: 100vh;
-  background: #dddddd;
-
-}
-
-
-
 .inactive {
   font-weight: normal;
 }
@@ -187,7 +177,8 @@ button{
 
 @keyframes backgroundChange {
   from {background-color: white}
-  to {background-color: #DEDE69FF}
+  to {background-color: #e3e390
+  }
 }
 
 @keyframes fadeOut {
