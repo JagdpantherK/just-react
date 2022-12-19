@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+  background: #dddddd;
+
 }
 
 .active {
@@ -29,15 +39,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 70px;
+  height: 70px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 70px;
 }
 
 .square:focus {
@@ -66,14 +76,83 @@ ol, ul {
 }
 
 .reset {
+  text-align: center;
   padding: 5px;
 }
 
 .game {
+  padding-top: 10%;
+  align-items: center;
+  justify-content: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .game-info {
   margin-left: 20px;
 }
+
+.loader {
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  animation: backgroundChange .5s linear 3s forwards;
+}
+
+.load-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 6.5vmax;
+  width: fit-content;
+  display: flex;
+  animation: colorChange .5s linear 3s forwards;
+}
+
+.loaded-text {
+  transform: scale(1.5);
+  animation: scaleText .5s linear .5s forwards;
+}
+
+.loading-text {
+  width: 0;
+  overflow: hidden;
+  animation: expand 1s linear 1.5s forwards;
+  white-space: nowrap;
+}
+.belarus{
+  color: red;
+}
+.rus{
+  color: green;
+}
+
+@keyframes scaleText {
+  from {transform: scale(1.5)}
+  to {transform: scale(1)}
+}
+
+@keyframes expand {
+  from {width: 0;}
+  to {width: 50vmax;}
+}
+
+@keyframes backgroundChange {
+  from {background-color: white}
+  to {background-color: #DEDE69FF}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
