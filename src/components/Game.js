@@ -157,7 +157,7 @@ class Game extends React.Component {
       return (
         <li key={index}>
           <button
-            className={active}
+            className="active game-board-button"
             key={`${move.location.col}_${move.location.row}`}
             onClick={() => this.jumpTo(index)}
           >
@@ -193,7 +193,7 @@ class Game extends React.Component {
         gameStatus === "draw" ? (
           <div className="draw">
             <h2>Draw!</h2>
-            <button onClick={() => this.reset()}>Play again</button>
+            <button className="game-button" onClick={() => this.reset()}>Play again</button>
           </div>
         ) : (
           /** Otherwise, show the game board */
@@ -208,11 +208,11 @@ class Game extends React.Component {
             gameStatus === "win" ? (
               <div className="win">
                 <h2>{`"${result.win.player}" is winner!`}</h2>
-                <button onClick={() => this.reset()}>Play again</button>
+                <button className="game-button" onClick={() => this.reset()}>Play again</button>
               </div>
             ) : (
               <div className="reset">
-                <button onClick={() => this.reset()}>Reset game</button>
+                <button className="game-button" onClick={() => this.reset()}>Reset game</button>
               </div>
             )}
           </div>
@@ -222,7 +222,7 @@ class Game extends React.Component {
           <div>{status}</div>
           {/** Show the toggle button only if there are two or more moves to sort */
           history.length > 1 ? (
-            <button onClick={() => this.toggleMoves()}>Toggle moves</button>
+            <button className="game-board-button" onClick={() => this.toggleMoves()}>Toggle moves</button>
           ) : (
             ""
           )}
