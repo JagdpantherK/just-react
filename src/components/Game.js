@@ -208,6 +208,7 @@ class Game extends React.Component {
             gameStatus === "win" ? (
               <div className="win">
                 <h2>{`"${result.win.player}" is winner!`}</h2>
+                {/*<img className="image" src={image} alt="photo"/>*/}
                 <button className="game-button" onClick={() => this.reset()}>Play again</button>
               </div>
             ) : (

@@ -73,7 +73,7 @@ ol, ul {
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 button{
   font-size: 22px;
@@ -121,7 +121,12 @@ button{
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.image{
+  height: 70px;
 }
 
 .loader {
@@ -145,6 +150,7 @@ button{
   width: fit-content;
   display: flex;
   animation: colorChange .5s linear 3s forwards;
+  flex-direction: row;
 }
 
 .loaded-text {
@@ -157,8 +163,11 @@ button{
   overflow: hidden;
   animation: expand 1s linear 1.5s forwards;
   white-space: nowrap;
+  display: flex;
+  flex-direction: row;
 }
 .belarus{
+  padding-left: 5%;
   color: red;
 }
 .rus{
@@ -186,6 +195,18 @@ button{
   to {
     opacity: 0;
     z-index: -1;
+  }
+}
+@media (max-width: 600px) {
+  .game{
+    flex-direction: column;
+  }
+  .loading-text{
+    flex-direction: column;
+  }
+  @keyframes expand {
+    from {width: 0;}
+    to {width: 30vmax;}
   }
 }
 
